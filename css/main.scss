@@ -58,3 +58,33 @@ pre.highlight code,
   border: 3px solid #fff;
   border-radius:100%;
 }
+@media only screen and (max-width: 768px) {
+  .btn,
+  .navigation__item a {
+    display: inline-block; /* or block, depending on your layout */
+    margin: 10px auto; /* Adds margin to the top and bottom, and auto on the sides for centering if block */
+    padding: 8px 15px; /* Increases the padding for better touch targets */
+    font-size: 14px; /* Adjust font size for readability on small screens */
+    text-align: center; /* Ensures text is centered */
+    width: auto; /* Adjust width as needed, or set to auto for full width */
+  }
+
+  /* If you have any specific styles that need to change for mobile, add them here */
+  .navigation__item {
+    display: block; /* Stacks navigation items instead of inline */
+    width: 100%; /* Full width buttons */
+  }
+
+  /* Ensure the container of the buttons does not hide overflowed content */
+  .navigation-wrapper, .container, or .parent-selector {
+    overflow: visible;
+    width: auto; /* or 100%, depending on your layout */
+  }
+
+  /* Adjust the user image for smaller screens if necessary */
+  .user-image {
+    width: 80px; /* Smaller size for user image */
+    height: 80px;
+    border: 2px solid #fff;
+  }
+}
