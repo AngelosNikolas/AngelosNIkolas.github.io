@@ -88,3 +88,57 @@ pre.highlight code,
     border: 2px solid #fff;
   }
 }
+/* Base styles for buttons that should apply on all screen sizes */
+.btn,
+.navigation__item a {
+  display: inline-block; /* Keeps buttons inline */
+  margin: 5px 0; /* Original margin from your style */
+  padding: 8px 15px; /* Sufficient padding for clickable area */
+  font-size: 16px; /* Legible font size */
+  text-align: center; /* Centers the text inside buttons */
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: visible; /* Ensures content is not clipped */
+  text-overflow: ellipsis; /* Adds an ellipsis to overflowing text */
+  border: 1px solid transparent; /* Optional: for visible boundaries */
+  background-color: #333; /* Optional: background color for the buttons */
+  color: #fff; /* Text color for the buttons */
+}
+
+/* Media query for tablets and smaller desktops */
+@media only screen and (max-width: 1000px) {
+  .btn,
+  .navigation__item a {
+    display: block; /* Stacks buttons vertically */
+    width: auto; /* Adjusts width to fit content */
+    margin: 10px auto; /* Centers buttons with automatic horizontal margins */
+    padding: 10px 20px; /* Larger padding for a touch-friendly interface */
+  }
+
+  /* Ensures that the container does not hide overflowed content */
+  .navigation-wrapper {
+    overflow: visible;
+  }
+
+  /* Adjusts the user image size */
+  .user-image {
+    width: 80px; /* Adjusts the size for smaller screens */
+    height: 80px;
+    border-radius: 50%; /* Makes the image circular */
+    border: 2px solid #fff; /* Adds a white border */
+  }
+}
+
+/* Additional media query for mobile devices */
+@media only screen and (max-width: 768px) {
+  .btn,
+  .navigation__item a {
+    width: 100%; /* Full width on smaller mobile devices */
+    margin: 10px 0; /* Adjusts top and bottom margin */
+    padding: 12px; /* Larger padding for touch targets */
+    font-size: 18px; /* Increases font size for readability */
+  }
+}
+
+
+
+
