@@ -5,6 +5,8 @@
 @import "monokai";
 @import "timeline";
 
+/* Import your other stylesheets here */
+
 /* Modifications */
 
 pre.highlight,
@@ -17,10 +19,12 @@ pre.highlight code,
   white-space: pre-wrap;
 }
 
-.btn,
+/* Base styles for buttons that should apply on all screen sizes */
 .navigation__item a {
+  display: inline-block; /* Keeps buttons inline */
   margin: 5px 0;
   white-space: nowrap;
+  /* Add other base styles for buttons here */
 }
 
 .pagination__page-number {
@@ -47,7 +51,7 @@ pre.highlight code,
 }
 
 .footer__copyright {
-    margin: 0 20px 10px;
+  margin: 0 20px 10px;
 }
 
 .user-image {
@@ -56,11 +60,13 @@ pre.highlight code,
   width: 100px;
   height: 100px;
   border: 3px solid #fff;
-  border-radius:100%;
+  border-radius: 100%;
 }
+
+/* Media query for screens with a maximum width of 768px */
 @media only screen and (max-width: 768px) {
-  .btn,
-  .navigation__item a {
+  /* Updated styles for button links and navigation wrapper on smaller screens */
+  .navigation-wrapper {
     display: inline-block; /* or block, depending on your layout */
     margin: 10px auto; /* Adds margin to the top and bottom, and auto on the sides for centering if block */
     padding: 8px 15px; /* Increases the padding for better touch targets */
@@ -69,14 +75,8 @@ pre.highlight code,
     width: auto; /* Adjust width as needed, or set to auto for full width */
   }
 
-  /* If you have any specific styles that need to change for mobile, add them here */
-  .navigation__item {
-    display: block; /* Stacks navigation items instead of inline */
-    width: 100%; /* Full width buttons */
-  }
-
   /* Ensure the container of the buttons does not hide overflowed content */
-  .navigation-wrapper, .container, or .parent-selector {
+  .navigation-wrapper {
     overflow: visible;
     width: auto; /* or 100%, depending on your layout */
   }
@@ -85,60 +85,12 @@ pre.highlight code,
   .user-image {
     width: 80px; /* Smaller size for user image */
     height: 80px;
+    border-radius: 50%; /* Makes the image circular */
     border: 2px solid #fff;
   }
 }
-/* Base styles for buttons that should apply on all screen sizes */
-.btn,
-.navigation__item a {
-  display: inline-block; /* Keeps buttons inline */
-  margin: 5px 0; /* Original margin from your style */
-  padding: 8px 15px; /* Sufficient padding for clickable area */
-  font-size: 16px; /* Legible font size */
-  text-align: center; /* Centers the text inside buttons */
-  white-space: nowrap; /* Prevents text from wrapping */
-  overflow: visible; /* Ensures content is not clipped */
-  text-overflow: ellipsis; /* Adds an ellipsis to overflowing text */
-  border: 1px solid transparent; /* Optional: for visible boundaries */
-  background-color: #333; /* Optional: background color for the buttons */
-  color: #fff; /* Text color for the buttons */
-}
 
-/* Media query for tablets and smaller desktops */
-@media only screen and (max-width: 1000px) {
-  .btn,
-  .navigation__item a {
-    display: block; /* Stacks buttons vertically */
-    width: auto; /* Adjusts width to fit content */
-    margin: 10px auto; /* Centers buttons with automatic horizontal margins */
-    padding: 10px 20px; /* Larger padding for a touch-friendly interface */
-  }
-
-  /* Ensures that the container does not hide overflowed content */
-  .navigation-wrapper {
-    overflow: visible;
-  }
-
-  /* Adjusts the user image size */
-  .user-image {
-    width: 80px; /* Adjusts the size for smaller screens */
-    height: 80px;
-    border-radius: 50%; /* Makes the image circular */
-    border: 2px solid #fff; /* Adds a white border */
-  }
-}
-
-/* Additional media query for mobile devices */
-@media only screen and (max-width: 768px) {
-  .btn,
-  .navigation__item a {
-    width: 100%; /* Full width on smaller mobile devices */
-    margin: 10px 0; /* Adjusts top and bottom margin */
-    padding: 12px; /* Larger padding for touch targets */
-    font-size: 18px; /* Increases font size for readability */
-  }
-}
-
+  
 
 
 
